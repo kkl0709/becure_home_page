@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import becure_back from "../assets/becure_back.webp";
-import demoVideoUrl from "../const/data";
+
 
 function Home() {
   useEffect(() => {
