@@ -6,6 +6,7 @@ import Features from './pages/Features';
 import Technology from './pages/Technology';
 import Process from './pages/Process';
 import Contact from './pages/Contact';
+import Team from './pages/Team';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/technology" element={<Technology />} />
             <Route path="/process" element={<Process />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/download" element={<DownloadPage />} />
           </Routes>
         </main>

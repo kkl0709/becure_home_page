@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import becure_back from '../assets/becure_back.webp';
 function Home() {
   useEffect(() => {
     // Animate on scroll
@@ -51,7 +51,7 @@ function Home() {
             </div>
           </div>
           <div className="hero-image">
-            <span>Image Coming Soon</span>
+            <img src={becure_back} alt="BeCure Background" />
           </div>
         </div>
       </section>

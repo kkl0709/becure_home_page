@@ -1,9 +1,11 @@
+import becureImage from '../assets/becure.webp';
+
 function Technology() {
   return (
     <section className="technology page-section" id="technology">
       <div className="tech-content">
         <div className="tech-image">
-          <span>AI Model Diagram</span>
+          <img src={becureImage} alt="BeCure AI Model Diagram" />
         </div>
         <div className="tech-text">
           <h2>Cutting-edge AI Technology</h2>

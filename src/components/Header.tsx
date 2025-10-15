@@ -47,6 +47,11 @@ function Header() {
             </Link>
           </li>
           <li>
+            <Link to="/team" className={location.pathname === '/team' ? 'active' : ''}>
+              Team
+            </Link>
+          </li>
+          <li>
             <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>
               Contact
             </Link>

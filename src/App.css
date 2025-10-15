@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: #FED45A;
+  --primary-color: #fed45a;
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
   --bg-light: #f8f9fa;
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
   overflow-x: hidden;
@@ -59,7 +59,7 @@ nav {
 .logo {
   font-size: 1.8rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #FED45A, #FFA500);
+  background: linear-gradient(135deg, #fed45a, #ffa500);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -80,7 +80,7 @@ nav {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -128,7 +128,7 @@ nav {
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   right: -10%;
@@ -139,8 +139,13 @@ nav {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-30px) rotate(180deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
 }
 
 .hero-content {
@@ -155,8 +160,6 @@ nav {
   width: 100%;
 }
 
-
-
 .hero-text h1 {
   font-size: 3.5rem;
   font-weight: 800;
@@ -169,7 +172,7 @@ nav {
 }
 
 .hero-text h1 span {
-  background: linear-gradient(135deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #fed45a 0%, #ffa500 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -189,7 +192,7 @@ nav {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #fed45a 0%, #ffa500 100%);
   color: var(--text-primary);
   padding: 1rem 2.5rem;
   border-radius: 50px;
@@ -233,6 +236,13 @@ nav {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   color: var(--text-secondary);
   font-size: 1.2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 /* Features Section */
@@ -283,13 +293,13 @@ nav {
 }
 
 .feature-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(90deg, #fed45a 0%, #ffa500 100%);
 }
 
 .feature-card:hover {
@@ -300,7 +310,7 @@ nav {
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #fed45a 0%, #ffa500 100%);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -350,6 +360,13 @@ nav {
   font-size: 1.2rem;
 }
 
+.tech-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 컨테이너를 꽉 채우되 비율 유지, 넘치는 부분은 크롭 */
+  border-radius: inherit;
+}
+
 .tech-text h2 {
   font-size: 2.5rem;
   font-weight: 800;
@@ -374,11 +391,11 @@ nav {
 }
 
 .tech-list li::before {
-  content: '✓';
+  content: "✓";
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: linear-gradient(135deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #fed45a 0%, #ffa500 100%);
   color: var(--white);
   border-radius: 50%;
   text-align: center;
@@ -400,13 +417,13 @@ nav {
 }
 
 .process-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(180deg, #fed45a 0%, #ffa500 100%);
 }
 
 .process-step {
@@ -435,7 +452,7 @@ nav {
   transform: translateX(-50%);
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #fed45a 0%, #ffa500 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -477,7 +494,7 @@ nav {
 .stat-item h3 {
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #fed45a 0%, #ffa500 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -492,7 +509,7 @@ nav {
 /* CTA Section */
 .cta-section {
   padding: 100px 5%;
-  background: linear-gradient(135deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #fed45a 0%, #ffa500 100%);
   text-align: center;
 }
 
@@ -572,7 +589,7 @@ footer {
 .footer-brand h3 {
   font-size: 2rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #FED45A 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #fed45a 0%, #ffa500 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -671,11 +688,18 @@ footer {
 }
 
 /* Contact Page */
+.contact.page-section {
+  padding-left: 2%;
+  padding-right: 2%;
+}
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 수직 중앙 */
+  align-items: center;     /* 수평 중앙 */
   gap: 60px;
-  margin-top: 60px;
+  margin: 60px auto;
+  width: 100%;
 }
 
 .contact-info h3 {
@@ -729,6 +753,8 @@ footer {
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  max-width: 900px; /* 폼을 넓게 표시 */
 }
 
 .form-group {
