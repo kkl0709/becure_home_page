@@ -230,19 +230,21 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 500px;
-  background: linear-gradient(135deg, #f6f6f6 0%, #e9e9e9 100%);
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  min-height: auto;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
   color: var(--text-secondary);
   font-size: 1.2rem;
 }
 
 .hero-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
+  height: auto;
+  max-width: 420px;   /* 기술 섹션과 동일한 최대 폭 */
+  object-fit: contain;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 /* Features Section */
@@ -348,24 +350,36 @@ nav {
 }
 
 .tech-image {
-  min-height: 500px;
-  background: linear-gradient(135deg, #f6f6f6 0%, #e9e9e9 100%);
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
+  min-height: auto;
+  /* color transparent */
+  background: transparent;
+  box-shadow: none;
+  display: flex;              /* 내부 이미지 중앙 정렬 */
   justify-content: center;
-  position: relative;
-  color: var(--text-secondary);
-  font-size: 1.2rem;
+  align-items: center;
+  justify-self: center;       /* 그리드 왼쪽 칼럼의 가운데 위치 */
 }
 
 .tech-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* 컨테이너를 꽉 채우되 비율 유지, 넘치는 부분은 크롭 */
-  border-radius: inherit;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;        /* 모서리 각짐 제거 */
+  display: block;
 }
+
+.technology .tech-image img {
+  max-width: 420px;
+  max-height: 100%;
+  border-radius: 16px;        /* 우선순위 높은 규칙에도 반영 */
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* 이미지 최대 높이를 우측 텍스트 영역 높이에 맞추기 */
+.technology .tech-content {
+  align-items: stretch; /* 두 컬럼 높이 동기화 */
+}
+
 
 .tech-text h2 {
   font-size: 2.5rem;
@@ -696,7 +710,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center; /* 수직 중앙 */
-  align-items: center;     /* 수평 중앙 */
+  align-items: center; /* 수평 중앙 */
   gap: 60px;
   margin: 60px auto;
   width: 100%;

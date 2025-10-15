@@ -7,7 +7,7 @@ function Technology() {
         <div className="tech-image">
           <img src={becureImage} alt="BeCure AI Model Diagram" />
         </div>
-        <div className="tech-text">
+        <div className="tech-text" id="tech-text">
           <h2>Cutting-edge AI Technology</h2>
           <p>BeCure combines the latest machine learning algorithms with computer vision technology 
              to achieve industry-leading mite detection accuracy.</p>
