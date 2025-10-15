@@ -7,6 +7,7 @@ import Technology from './pages/Technology';
 import Process from './pages/Process';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
+import Demo from './pages/Demo';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/process" element={<Process />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/demo" element={<Demo />} />
             <Route path="/download" element={<DownloadPage />} />
           </Routes>
         </main>

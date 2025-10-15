@@ -1,36 +1,38 @@
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import becure_back from '../assets/becure_back.webp';
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import becure_back from "../assets/becure_back.webp";
+import demoVideoUrl from "../const/data";
+
 function Home() {
   useEffect(() => {
     // Animate on scroll
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
+      rootMargin: "0px 0px -100px 0px",
     } as const;
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const target = entry.target as HTMLElement;
-          target.style.opacity = '1';
-          target.style.transform = 'translateY(0)';
+          target.style.opacity = "1";
+          target.style.transform = "translateY(0)";
         }
       });
     }, observerOptions);
 
     // Apply animation to elements
-    const elementsToAnimate = document.querySelectorAll<HTMLElement>('.stat-item');
-    elementsToAnimate.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'all 0.6s ease';
+    const elementsToAnimate = document.querySelectorAll<HTMLElement>(".stat-item");
+    elementsToAnimate.forEach((el) => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(30px)";
+      el.style.transition = "all 0.6s ease";
       observer.observe(el);
     });
 
     // Cleanup
     return () => {
-      elementsToAnimate.forEach(el => {
+      elementsToAnimate.forEach((el) => {
         observer.unobserve(el);
       });
     };
@@ -42,12 +44,20 @@ function Home() {
       <section className="hero" id="home">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>AI-Powered <span>Mite Detection</span> Solution</h1>
-            <p>Detect and analyze mites in real-time using cutting-edge machine learning technology. 
-               Make the smart choice to protect your family's health and safety with BeCure.</p>
+            <h1>
+              AI-Powered <span>Mite Detection</span> Solution
+            </h1>
+            <p>
+              Detect and analyze mites in real-time using cutting-edge machine learning technology. Make the smart choice to protect your
+              family's health and safety with BeCure.
+            </p>
             <div className="hero-buttons">
-              <Link to="/download" className="btn-primary">Start Free Trial</Link>
-              <Link to="/demo" className="btn-secondary">Watch Demo</Link>
+              <Link to="/download" className="btn-primary">
+                Start Free Trial
+              </Link>
+              <Link to="/demo" className="btn-secondary">
+                Watch Demo
+              </Link>
             </div>
           </div>
           <div className="hero-image">
@@ -58,8 +68,14 @@ function Home() {
 
       {/* Stats Section */}
       <section className="stats">
-        <div className="section-header" style={{color: 'white'}}>
-          <h2 style={{background: 'linear-gradient(135deg, #FED45A 0%, #FFA500 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>
+        <div className="section-header" style={{ color: "white" }}>
+          <h2
+            style={{
+              background: "linear-gradient(135deg, #FED45A 0%, #FFA500 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             BeCure by Numbers
           </h2>
         </div>
@@ -89,8 +105,22 @@ function Home() {
           <h2>Get Started Today</h2>
           <p>Take the first step in protecting your family's health with BeCure</p>
           <div className="cta-buttons">
-            <a href="https://apps.apple.com/us/app/becure-ai-detecting/id6749362915" className="btn-white" target="_blank" rel="noopener noreferrer">Download on App Store</a>
-            <a href="https://play.google.com/store/apps/details?id=com.appdoggaebi.detectingmites" className="btn-outline-white" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+            <a
+              href="https://apps.apple.com/us/app/becure-ai-detecting/id6749362915"
+              className="btn-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download on App Store
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.appdoggaebi.detectingmites"
+              className="btn-outline-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get it on Google Play
+            </a>
           </div>
         </div>
       </section>
