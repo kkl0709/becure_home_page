@@ -45,7 +45,7 @@ function DownloadPage() {
           <div className="platform-icon">🍎</div>
           <h3>iOS</h3>
           <p>Requires iOS 12.0 or later</p>
-          <a href="#" className="download-btn">
+          <a href="https://apps.apple.com/us/app/becure-ai-detecting/id6749362915" className="download-btn" target="_blank" rel="noopener noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on App Store" />
           </a>
         </div>
@@ -54,7 +54,7 @@ function DownloadPage() {
           <div className="platform-icon">🤖</div>
           <h3>Android</h3>
           <p>Requires Android 8.0 or later</p>
-          <a href="#" className="download-btn">
+          <a href="https://play.google.com/store/apps/details?id=com.appdoggaebi.detectingmites" className="download-btn" target="_blank" rel="noopener noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" />
           </a>
         </div>

@@ -89,8 +89,8 @@ function Home() {
           <h2>Get Started Today</h2>
           <p>Take the first step in protecting your family's health with BeCure</p>
           <div className="cta-buttons">
-            <a href="#" className="btn-white">Download on App Store</a>
-            <a href="#" className="btn-outline-white">Get it on Google Play</a>
+            <a href="https://apps.apple.com/us/app/becure-ai-detecting/id6749362915" className="btn-white" target="_blank" rel="noopener noreferrer">Download on App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.appdoggaebi.detectingmites" className="btn-outline-white" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
           </div>
         </div>
       </section>
