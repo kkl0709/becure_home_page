@@ -188,27 +188,6 @@ function Team() {
                     display: 'block'
                   }}
                 />
-                <button
-                  onClick={() => setSelectedMember(null)}
-                  style={{
-                    position: 'absolute',
-                    top: '15px',
-                    right: '15px',
-                    background: 'rgba(0, 0, 0, 0.5)',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '50%',
-                    width: '40px',
-                    height: '40px',
-                    fontSize: '20px',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}
-                >
-                  ×
-                </button>
               </div>
 
               {/* Member info */}
