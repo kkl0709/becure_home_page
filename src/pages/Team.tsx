@@ -74,7 +74,7 @@ function Team() {
             width = '25%';
           } else if (member.id === 2) { // Sangho
             left = '65%';
-            width = '25%';
+            width = '20%';
           } else { // Jihan
             left = '85%';
             width = '15%';
