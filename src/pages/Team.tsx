@@ -127,11 +127,20 @@ function Team() {
         }}>
           Meet Our Team
         </h2>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }} >
+          <img src={'../public/meeting.webp'} alt="Conduct" style={{ width: '50%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
+          <img src={'../public/conduct.webp'} alt="Conduct" style={{ width: '50%', height: '100%', objectFit: 'cover', borderTopRightRadius: '10px', borderBottomRightRadius: '10px' }} />
+        </div>
         <p style={{
           fontSize: '1.2rem',
           lineHeight: '1.6',
           color: '#666',
-          marginBottom: '1rem'
+          marginBottom: '1rem',
+          paddingTop: '20px',
         }}>
           We are BeCure, a student-founded team united by our shared passion for the environment and our determination to protect one of its smallest yet most essential creatures — the bee.
         </p>
@@ -142,6 +151,8 @@ function Team() {
         }}>
           Our journey began from a simple realization: bees are disappearing, and with them, the balance of our ecosystems. What started as curiosity and concern grew into an innovative project — developing an AI-based solution to detect Varroa mite infestations early, helping beekeepers protect their hives before it's too late.
         </p>
+
+
       </div>
 
       {/* Dialog for selected member details */}
