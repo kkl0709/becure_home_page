@@ -132,8 +132,8 @@ function Team() {
           alignItems: 'center',
           justifyContent: 'center',
         }} >
-          <img src={'../public/meeting.webp'} alt="Conduct" style={{ width: '50%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
-          <img src={'../public/conduct.webp'} alt="Conduct" style={{ width: '50%', height: '100%', objectFit: 'cover', borderTopRightRadius: '10px', borderBottomRightRadius: '10px' }} />
+          <img src={'/meeting.webp'} alt="Conduct" style={{ width: '50%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '10px', borderBottomLeftRadius: '10px' }} />
+          <img src={'/conduct.webp'} alt="Conduct" style={{ width: '50%', height: '100%', objectFit: 'cover', borderTopRightRadius: '10px', borderBottomRightRadius: '10px' }} />
         </div>
         <p style={{
           fontSize: '1.2rem',
