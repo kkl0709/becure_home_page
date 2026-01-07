@@ -87,7 +87,7 @@ function Home() {
             <a
               href="/phone_stand.zip"
               className="btn-primary"
-              download
+              download="phone_stand.zip"
             >
               Download Phone Stand (ZIP)
             </a>
