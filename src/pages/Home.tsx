@@ -5,38 +5,42 @@ import becure_back from "../assets/becure_back.webp";
 
 function Home() {
   useEffect(() => {
-    // Animate on scroll
+    // 스크롤 시 애니메이션을 위한 IntersectionObserver 설정 시작
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    } as const;
+      threshold: 0.1,                      // 요소가 10% 이상 보일 때 콜백 실행
+      rootMargin: "0px 0px -100px 0px",    // 아래쪽 100px 여유를 두고 미리 감지
+    } as const;                            // TypeScript에서 상수 타입으로 고정
 
+    // IntersectionObserver 생성
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        // 요소가 화면에 들어오면 실행
         if (entry.isIntersecting) {
-          const target = entry.target as HTMLElement;
-          target.style.opacity = "1";
-          target.style.transform = "translateY(0)";
+          const target = entry.target as HTMLElement;   // 관찰 중인 요소를 HTMLElement로 캐스팅
+          target.style.opacity = "1";                   // 투명도 1로 (보이게)
+          target.style.transform = "translateY(0)";     // 아래에서 위로 올라오는 효과
         }
       });
-    }, observerOptions);
+    }, observerOptions); // 위에서 정의한 옵션 적용
 
-    // Apply animation to elements
+    // 애니메이션을 적용할 요소들 선택
     const elementsToAnimate = document.querySelectorAll<HTMLElement>(".stat-item, .tech-highlight-item");
+
+    // 각 요소에 초기 스타일과 관찰 설정
     elementsToAnimate.forEach((el) => {
-      el.style.opacity = "0";
-      el.style.transform = "translateY(30px)";
-      el.style.transition = "all 0.6s ease";
-      observer.observe(el);
+      el.style.opacity = "0";                           // 처음엔 투명하게
+      el.style.transform = "translateY(30px)";          // 살짝 아래로 이동한 상태로 시작
+      el.style.transition = "all 0.6s ease";            // 부드럽게 0.6초 동안 전환
+      observer.observe(el);                             // IntersectionObserver로 감시 시작
     });
 
-    // Cleanup
+    // 클린업 함수: 컴포넌트가 사라질 때 observer 해제
     return () => {
       elementsToAnimate.forEach((el) => {
-        observer.unobserve(el);
+        observer.unobserve(el);                         // 감시 중단 (메모리 누수 방지)
       });
     };
-  }, []);
+  }, []); // 의존성 배열 비어 있음 → 컴포넌트 마운트 시 1회만 실행
 
   return (
     <>
@@ -48,8 +52,8 @@ function Home() {
               Detect Hidden Mites by <span>Observing Their Prey</span>
             </h1>
             <p>
-              Broad mites hide after feeding, making direct detection impossible. 
-              BeCure's AI analyzes the <strong>abnormal movement patterns of infested larvae</strong> to 
+              Broad mites hide after feeding, making direct detection impossible.
+              BeCure's AI analyzes the <strong>abnormal movement patterns of infested larvae</strong> to
               detect mite presence with 99.5% accuracy — seeing what others can't.
             </p>
             <div className="hero-buttons">
