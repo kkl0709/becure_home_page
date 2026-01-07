@@ -22,7 +22,7 @@ function Home() {
     }, observerOptions);
 
     // Apply animation to elements
-    const elementsToAnimate = document.querySelectorAll<HTMLElement>(".stat-item");
+    const elementsToAnimate = document.querySelectorAll<HTMLElement>(".stat-item, .tech-highlight-item");
     elementsToAnimate.forEach((el) => {
       el.style.opacity = "0";
       el.style.transform = "translateY(30px)";
@@ -45,11 +45,12 @@ function Home() {
         <div className="hero-content">
           <div className="hero-text">
             <h1>
-              AI-Powered <span>Mite Detection</span> Solution
+              Detect Hidden Mites by <span>Observing Their Prey</span>
             </h1>
             <p>
-              Detect and analyze mites in real-time using cutting-edge machine learning technology. Make the smart choice to protect your
-              family's health and safety with BeCure.
+              Broad mites hide after feeding, making direct detection impossible. 
+              BeCure's AI analyzes the <strong>abnormal movement patterns of infested larvae</strong> to 
+              detect mite presence with 99.5% accuracy — seeing what others can't.
             </p>
             <div className="hero-buttons">
               <Link to="/download" className="btn-primary">
@@ -62,6 +63,55 @@ function Home() {
           </div>
           <div className="hero-image">
             <img src={becure_back} alt="BeCure Background" />
+          </div>
+        </div>
+      </section>
+
+      {/* Phone Stand Preview & Download */}
+      <section className="phone-stand-section">
+        <div className="section-header">
+          <h2>Phone Stand for Recording</h2>
+          <p>Download the phone stand to record larvae videos with stable framing</p>
+        </div>
+        <div className="phone-stand-content" style={{ display: "grid", gap: "24px", alignItems: "center" }}>
+          <img
+            src="/phone_stand.webp"
+            alt="Phone stand preview"
+            style={{ width: "100%", maxWidth: 640, borderRadius: 12, margin: "0 auto" }}
+          />
+          <div style={{ textAlign: "center" }}>
+            <a
+              href="/phone_stand.zip"
+              className="btn-primary"
+              download
+            >
+              Download Phone Stand (ZIP)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Technology Highlight */}
+      <section className="tech-highlight-section">
+        <div className="section-header">
+          <h2>The Innovation</h2>
+          <p>Can't find the mite? Find its victim instead.</p>
+        </div>
+        <div className="tech-highlight-grid">
+          <div className="tech-highlight-item">
+            <div className="highlight-icon">🔬</div>
+            <h3>The Problem</h3>
+            <p>Broad mites feed on larvae then immediately hide. Their tiny size and hiding behavior makes direct detection nearly impossible.</p>
+          </div>
+          <div className="tech-highlight-item">
+            <div className="highlight-icon">💡</div>
+            <h3>Our Approach</h3>
+            <p>We don't look for mites — we analyze <strong>larvae behavior</strong>. Infested larvae move abnormally, revealing the hidden threat.</p>
+          </div>
+          <div className="tech-highlight-item">
+            <div className="highlight-icon">🎯</div>
+            <h3>The Result</h3>
+            <p>99.5% detection accuracy by identifying stressed larvae patterns that indicate mite infestation.</p>
           </div>
         </div>
       </section>
@@ -85,25 +135,57 @@ function Home() {
             <p>Detection Accuracy</p>
           </div>
           <div className="stat-item">
-            <h3>0.3s</h3>
-            <p>Average Analysis Time</p>
+            <h3>&lt;3s</h3>
+            <p>Analysis Time</p>
           </div>
           <div className="stat-item">
-            <h3>500K+</h3>
-            <p>Total Downloads</p>
+            <h3>60fps</h3>
+            <p>Movement Tracking</p>
           </div>
           <div className="stat-item">
-            <h3>4.8/5.0</h3>
-            <p>User Rating</p>
+            <h3>0.1mm</h3>
+            <p>Mites We Detect Indirectly</p>
           </div>
         </div>
+      </section>
+
+      {/* How It Works Preview */}
+      <section className="how-it-works-preview">
+        <div className="section-header">
+          <h2>How It Works</h2>
+          <p>From hidden mite to detected threat in seconds</p>
+        </div>
+        <div className="workflow-preview">
+          <div className="workflow-step">
+            <span className="step-num">1</span>
+            <p>Record larvae on camera</p>
+          </div>
+          <div className="workflow-arrow">→</div>
+          <div className="workflow-step">
+            <span className="step-num">2</span>
+            <p>AI tracks their movements</p>
+          </div>
+          <div className="workflow-arrow">→</div>
+          <div className="workflow-step">
+            <span className="step-num">3</span>
+            <p>Detects stress patterns</p>
+          </div>
+          <div className="workflow-arrow">→</div>
+          <div className="workflow-step">
+            <span className="step-num">4</span>
+            <p>Mite presence confirmed</p>
+          </div>
+        </div>
+        <Link to="/technology" className="learn-more-link">
+          Learn more about our technology →
+        </Link>
       </section>
 
       {/* CTA Section */}
       <section className="cta-section" id="download">
         <div className="cta-content">
-          <h2>Get Started Today</h2>
-          <p>Take the first step in protecting your family's health with BeCure</p>
+          <h2>Detect What's Hiding</h2>
+          <p>Join farmers who protect their crops with AI-powered indirect detection</p>
           <div className="cta-buttons">
             <a
               href="https://apps.apple.com/us/app/becure-ai-detecting/id6749362915"
